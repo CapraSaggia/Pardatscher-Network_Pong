@@ -8,6 +8,7 @@ using System;
 public class MyNetworkManager : NetworkManager
 {
     [SerializeField] private GameObject racketPrefab;
+    [SerializeField] private GameObject ballPrefab;
     [SerializeField] private GameOverHandler gameOverHandlerPrefab;
 
     public static event Action ClientOnConnected;
@@ -37,14 +38,21 @@ public class MyNetworkManager : NetworkManager
             NetworkServer.Spawn(gameOverHandlerInstance.gameObject);
 
 
-            foreach(Player player in Players)
+            foreach (Player player in Players)
             {
                 GameObject racketInstance = Instantiate(
                      racketPrefab,
                     GetStartPosition().position,
                     Quaternion.identity);
 
-                 NetworkServer.Spawn(racketInstance, player.connectionToClient);
+                NetworkServer.Spawn(racketInstance, player.connectionToClient);
+
+                GameObject ballInstance = Instantiate(
+                    ballPrefab,
+                    Vector3.zero,
+                    Quaternion.identity
+                );
+                NetworkServer.Spawn(ballInstance);
             }
         }
     }

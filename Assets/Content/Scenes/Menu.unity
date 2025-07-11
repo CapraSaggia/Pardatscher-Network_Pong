@@ -430,7 +430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1453254172032516370, guid: f502eefa060bdb841b4ec7ad44676fb4, type: 3}
       propertyPath: useSteam
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729506977214978475, guid: f502eefa060bdb841b4ec7ad44676fb4, type: 3}
+      propertyPath: m_text
+      value: Network Pong
       objectReference: {fileID: 0}
     - target: {fileID: 4473752793582330621, guid: f502eefa060bdb841b4ec7ad44676fb4, type: 3}
       propertyPath: playerNamesTexts.Array.size
@@ -499,6 +503,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5214751613840048359, guid: 0072fb7d9f1532042907485c04b17b62, type: 3}
+      propertyPath: ballPrefab
+      value: 
+      objectReference: {fileID: 1080679924113744, guid: f48158d0888aa864c92fe6dd97e712a9, type: 3}
     - target: {fileID: 5214751613840048359, guid: 0072fb7d9f1532042907485c04b17b62, type: 3}
       propertyPath: spawnPrefabs.Array.size
       value: 1
