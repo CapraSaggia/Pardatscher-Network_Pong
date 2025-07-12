@@ -47,13 +47,14 @@ public class MyNetworkManager : NetworkManager
 
                 NetworkServer.Spawn(racketInstance, player.connectionToClient);
 
-                GameObject ballInstance = Instantiate(
-                    ballPrefab,
-                    Vector3.zero,
-                    Quaternion.identity
-                );
-                NetworkServer.Spawn(ballInstance);
             }
+            
+            GameObject ballInstance = Instantiate(
+                ballPrefab,
+                Vector3.zero,
+                Quaternion.identity
+            );
+            NetworkServer.Spawn(ballInstance);
         }
     }
 
@@ -106,7 +107,7 @@ public class MyNetworkManager : NetworkManager
 
     public void StartGame()
     {
-        //if (Players.Count != 2) return;
+        if (Players.Count != 2) return;
 
         isGameInProgress = true;
 
