@@ -48,7 +48,6 @@ public class Player : NetworkBehaviour
     public override void OnStartClient()
     {
         base.OnStartClient();
-
         if (NetworkServer.active) return;
 
         ((MyNetworkManager)NetworkManager.singleton).Players.Add(this);

@@ -21,7 +21,7 @@ public class MyNetworkManager : NetworkManager
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
         base.OnServerAddPlayer(conn);
-        Debug.Log(conn.address);
+        
         Player player = conn.identity.GetComponent<Player>();
         Players.Add(player);
 
